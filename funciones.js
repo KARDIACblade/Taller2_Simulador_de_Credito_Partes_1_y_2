@@ -4,10 +4,11 @@
 
  function calcularDisponible (ingresos,egresos){
     let disponible = ingresos-egresos;
-    if (disponible < 0){
-        return 0;
-    }
-    return disponible;
+    
+        if (disponible < 0){
+            disponible = 0;
+            }
+        return disponible;
  }
 
  function recuperarTexto(idComponente){
