@@ -27,3 +27,8 @@
     let cmp = document.getElementById(idComponente);
     cmp.textContent=valor;
  }
+
+ function calcularCapacidadPago (montoDisponible){
+  let valorDisponible =  montoDisponible * 0.5
+    return valorDisponible;
+ }

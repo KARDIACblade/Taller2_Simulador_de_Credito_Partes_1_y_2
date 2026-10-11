@@ -11,4 +11,9 @@
 
     //Mostrar en pantalla, en el componente spnDisponible
     mostrarSpan("spnDisponible",disponibleDeci);
+
+    let montoDisponible = calcularCapacidadPago(disponible);
+    let montoDeci = montoDisponible.toFixed(2);
+        mostrarSpan("spnCapacidadPago",montoDeci);
+
  }
