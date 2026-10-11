@@ -12,8 +12,17 @@
     //Mostrar en pantalla, en el componente spnDisponible
     mostrarSpan("spnDisponible",disponibleDeci);
 
+    //capacidad de pago
     let montoDisponible = calcularCapacidadPago(disponible);
     let montoDeci = montoDisponible.toFixed(2);
-        mostrarSpan("spnCapacidadPago",montoDeci);
+    mostrarSpan("spnCapacidadPago",montoDeci);
+
+    // interes simmple
+    let monto = recuperarEntero("txtMonto");
+    let tasa = recuperarEntero("txtTasaInteres");
+    let plazoAnios = recuperarEntero("txtPlazo");
+    let interesSimple=calcularInteresSimple(monto,tasa,plazoAnios);
+    let interesSimpleDeci =interesSimple.toFixed(2);
+    mostrarSpan("spnInteresPagar",interesSimpleDeci);
 
  }

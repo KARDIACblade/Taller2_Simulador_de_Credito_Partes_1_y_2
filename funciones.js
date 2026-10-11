@@ -23,6 +23,12 @@
     return valorFloat;
  }
 
+ function recuperarEntero(idComponente){
+    let valorTexto = recuperarTexto(idComponente);
+    let valorEntero = parseInt(valorTexto);
+    return valorEntero;
+ }
+
  function mostrarSpan(idComponente,valor){
     let cmp = document.getElementById(idComponente);
     cmp.textContent=valor;
@@ -32,3 +38,8 @@
   let valorDisponible =  montoDisponible * 0.5
     return valorDisponible;
  }
+
+function calcularInteresSimple(monto,tasa,plazoAnios){
+    let interesPagar = plazoAnios*monto*(tasa/100);
+    return interesPagar;
+}
