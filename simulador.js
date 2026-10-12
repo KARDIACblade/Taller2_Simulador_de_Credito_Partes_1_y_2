@@ -30,5 +30,9 @@
     //let valorTotalDeci = valorTotal.toFixed(2)
     mostrarSpan("spnTotalPrestamo",valorTotal);
 
+    // calcular cuota mensual
+    let cuotaMensual = calcularCuotaMensual(valorTotal,plazoAnios);
+    let cuotaMensualDeci = cuotaMensual.toFixed(2);
+    mostrarSpan("spnCuotaMensual",cuotaMensualDeci);
 
  }

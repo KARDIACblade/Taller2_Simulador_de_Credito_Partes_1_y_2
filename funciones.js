@@ -49,3 +49,9 @@ let impuestos = 100;
 let valorPagar = monto + interes + impuestos;
 return valorPagar;
 }
+
+function calcularCuotaMensual (total,plazoAnios){
+    let meses = (plazoAnios*12);
+    let cuatoaMensual = total/meses;
+    return cuatoaMensual;
+}
