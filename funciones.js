@@ -43,3 +43,9 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
     let interesPagar = plazoAnios*monto*(tasa/100);
     return interesPagar;
 }
+
+function calcularTotalPagar (monto,interes){
+let impuestos = 100;
+let valorPagar = monto + interes + impuestos;
+return valorPagar;
+}

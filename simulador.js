@@ -24,5 +24,11 @@
     let interesSimple=calcularInteresSimple(monto,tasa,plazoAnios);
     let interesSimpleDeci =interesSimple.toFixed(2);
     mostrarSpan("spnInteresPagar",interesSimpleDeci);
+    
+    // valor total a pagar
+    let valorTotal = calcularTotalPagar(monto,interesSimple);
+    //let valorTotalDeci = valorTotal.toFixed(2)
+    mostrarSpan("spnTotalPrestamo",valorTotal);
+
 
  }
