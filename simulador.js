@@ -35,4 +35,11 @@
     let cuotaMensualDeci = cuotaMensual.toFixed(2);
     mostrarSpan("spnCuotaMensual",cuotaMensualDeci);
 
+    // aprobar o rechazar credito
+     let credito = aprobarCredito (montoDisponible,cuotaMensual);
+        if (credito){
+             mostrarSpan("spnEstadoCredito","CREDITO APROBADO");
+        }else{
+            mostrarSpan("spnEstadoCredito","CREDITO RECHAZADO");
+        }
  }
