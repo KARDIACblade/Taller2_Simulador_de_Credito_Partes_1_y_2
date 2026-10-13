@@ -1,70 +1,292 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 0;
+/* ---------- Variables de color y medidas ---------- */
+:root {
+    --amarillo: #FFDD00;
+    --amarillo-oscuro: #E6C700;
+    --azul: #002D72;
+    --azul-oscuro: #001F52;
+    --fondo: #F2F5FA;
+    --superficie: #FFFFFF;
+    --texto: #1B2433;
+    --texto-suave: #5A6578;
+    --borde: #C9D2E0;
+    --radio: 12px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+    background-color: var(--azul);
+    border-bottom: 5px solid var(--amarillo);
+}
+
+.encabezado__interior {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.marca {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+/* ---------- Contenedor principal ---------- */
 .container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    color: var(--azul);
+    font-size: clamp(1.5rem, 5vw, 2.125rem);
+    line-height: 1.2;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.intro {
+    text-align: center;
+    color: var(--texto-suave);
+    margin: 0 auto 1.5rem;
+    max-width: 38rem;
+}
+
+/* ---------- Tarjetas ---------- */
+.paneles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.tarjeta {
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--amarillo);
+    border-radius: var(--radio);
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(0, 45, 114, 0.08);
 }
 
 h2 {
-    margin-top: 20px;
-    font-size: 18px;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.625rem;
+    font-size: 1.1875rem;
+    color: var(--azul);
+    border-bottom: 1px solid var(--borde);
 }
 
+/* ---------- Formulario ---------- */
 label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 0.875rem;
+    font-weight: 600;
+    color: var(--azul);
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    min-height: 48px;
+    padding: 0.625rem 0.75rem;
+    margin-top: 0.375rem;
+    font-size: 1rem; /* 16px evita el zoom automático en iPhone */
+    font-family: inherit;
+    color: var(--texto);
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--borde);
+    border-radius: 8px;
 }
 
-p {
-    margin-top: 10px;
+input::placeholder {
+    color: #8A94A6;
 }
 
-span {
-    font-weight: bold;
-    color: #2c3e50;
+input:focus {
+    outline: none;
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(255, 221, 0, 0.6);
 }
 
-.buttons {
-    margin-top: 20px;
+/* ---------- Resultados destacados ---------- */
+.resultado {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    margin: 0.75rem 0 0;
+    padding: 0.625rem 0.875rem;
+    background-color: #EEF3FB;
+    border-left: 4px solid var(--azul);
+    border-radius: 8px;
+    color: var(--texto-suave);
+}
+
+.resultado span {
+    min-height: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--azul);
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Estado del crédito ---------- */
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1.25rem 0 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--azul);
+    color: #FFFFFF;
+    border-radius: var(--radio);
+    border-bottom: 5px solid var(--amarillo);
+}
+
+.estado span {
+    font-size: clamp(1.25rem, 5vw, 1.625rem);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: var(--amarillo);
+    overflow-wrap: anywhere;
+}
+
+/* ---------- Botones ---------- */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-button:hover {
-    background-color: #2980b9;
+.btn-principal {
+    background-color: var(--amarillo);
+    color: var(--azul);
+    border: 2px solid var(--amarillo);
+}
+
+.btn-principal:hover {
+    background-color: var(--amarillo-oscuro);
+    border-color: var(--amarillo-oscuro);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul);
+    color: #FFFFFF;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 2px;
+}
+
+/* ---------- Tablets (600px o más) ---------- */
+@media (min-width: 600px) {
+    .encabezado__interior {
+        padding: 0.875rem 1.5rem;
+    }
+
+    .logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .marca {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .tarjeta {
+        padding: 1.5rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button {
+        width: auto;
+        min-width: 200px;
+    }
+}
+
+/* ---------- Pantallas anchas (900px o más): dos columnas ---------- */
+@media (min-width: 900px) {
+    .paneles {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* ---------- Celulares pequeños (menos de 380px) ---------- */
+@media (max-width: 379px) {
+    .marca {
+        font-size: 1.0625rem;
+    }
+
+    .tarjeta {
+        padding: 1rem;
+    }
+
+    .resultado span {
+        font-size: 1.125rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: none;
+    }
 }
