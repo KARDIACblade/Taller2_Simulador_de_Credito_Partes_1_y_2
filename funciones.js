@@ -64,3 +64,8 @@ function aprobarCredito(capacidadPago,cuotaMensual){
         return false;
     }
 }
+
+function limpiarCaja (idComponente){
+    let cmp = document.getElementById(idComponente);
+    cmp.value=""
+}

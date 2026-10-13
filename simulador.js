@@ -43,3 +43,20 @@
             mostrarSpan("spnEstadoCredito","CREDITO RECHAZADO");
         }
  }
+
+  //funcionamiento del boton REINICIAR
+    function reiniciar (){
+        limpiarCaja("txtIngresos");
+        limpiarCaja("txtEgresos");
+        limpiarCaja("txtMonto");
+        limpiarCaja("txtPlazo");
+        limpiarCaja("txtTasaInteres");
+
+        mostrarSpan("spnDisponible","");
+        mostrarSpan("spnCapacidadPago","");
+        mostrarSpan("spnInteresPagar","");
+        mostrarSpan("spnTotalPrestamo","");
+        mostrarSpan("spnCuotaMensual","");
+
+         mostrarSpan("spnEstadoCredito","ANALIZANDO...");
+    }
