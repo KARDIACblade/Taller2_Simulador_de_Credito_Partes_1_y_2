@@ -1,0 +1,36 @@
+
+Actúa como un diseñador gráfico y desarrollador front-end experto en interfaces financieras.
+
+CONTEXTO
+Tengo un simulador de crédito hecho con HTML, CSS y JavaScript. Necesito mejorar la parte visual para que tenga un aspecto empresarial, como la página de una entidad financiera, y que sea RESPONSIVE.
+
+ENTIDAD FINANCIERA
+Nombre del banco: BANCO PIONERO
+- Colores corporativos: Color principal gris, color secundario azul, color terciario amarillo.
+- incluye  un logo del  banco sencillo en SVG en línea (dentro del HTML) y colócalo en un encabezado. 
+
+REQUISITOS DE DISEÑO
+- Aspecto empresarial, limpio y profesional: encabezado con el logo, formulario en tarjetas, botones con los colores corporativos y estados hover.
+- Separa visualmente las secciones "Datos financieros" y "Solicitud de crédito".
+- Los resultados (Disponible, Capacidad de pago, Interés, Total, Cuota) deben verse destacados.
+- El "Estado de crédito" debe tener un estilo llamativo y neutro por defecto. No cambies su texto ni su lógica.
+- Tipografía legible, buen contraste y espaciado cómodo.
+
+RESPONSIVE
+- Debe verse perfecta en celulares, tablets y computadora.
+- Reemplaza anchos fijos (como width: 400px) por unidades flexibles (max-width, %, rem, clamp).
+- Usa media queries para pantallas pequeñas (menos de 600px) y tablets.
+- Campos y botones cómodos de tocar en el celular (mínimo 44px de alto).
+- Tamaños de letra y espacios bien ajustados en pantallas pequeñas.
+- Sin scroll horizontal en ningún tamaño.
+
+REGLAS IMPORTANTES
+1. Solo HTML y CSS. No uses librerías ni frameworks externos (ni Bootstrap, ni Tailwind, ni íconos externos).
+2. NO cambies, borres ni renombres ningún id. Los necesito para mi JavaScript: txtIngresos, txtEgresos, txtMonto, txtPlazo, txtTasaInteres, spnDisponible, spnCapacidadPago, spnInteresPagar, spnTotalPrestamo, spnCuotaMensual, spnEstadoCredito, btnCalcularCredito, btnReiniciar.
+3. Conserva el atributo onclick="calcular()" del botón Calcular Crédito y el orden de los <script>.
+4. No modifiques ningún archivo .js.
+5. Puedes agregar clases y contenedores nuevos, pero sin quitar los elementos existentes.
+6. Si usas fuentes, usa solo fuentes del sistema (por ejemplo Arial o Segoe UI).
+
+ENTREGA
+Dame el simulador.html completo y el simulador.css completo, listos para reemplazar. Al final, explica brevemente qué cambiaste.
